@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
 <link type="text/css" rel="stylesheet" media="all"
     href="css/common.css">
-
 </head>
 <body>
 	<div id="tip" >
@@ -75,8 +74,8 @@
 	    dom: document.getElementById("canvas"),
 	    duration: 1500,
 	   	onslidechange: function(idx){
-	   		var idx = document.getElementById('info').getElementsByTagName('strong')[0];
-	   		idx.innerText = this.sliderIndex;
+	   		var target = document.getElementById('info').getElementsByTagName('strong')[0];
+	   		target.innerText = idx;
 	   	}
 	});
 
@@ -90,7 +89,7 @@
 				target.className = '';
 				target.innerText = 'isLooping: false';
 			} else {
-				target.className = 'on';	
+				target.className = 'on';
 				target.innerText = 'isLooping: true';
 			}
 
